@@ -27,7 +27,7 @@ $(TARGET).elf: $(OBJECTS) link.ld
 
 run: $(TARGET).elf
 
-	qemu-system-riscv64 -machine virt -nographic -bios none -kernel $(TARGET).elf
+	qemu-system-riscv64 -machine virt -monitor stdio -bios none -kernel $(TARGET).elf
 
 clean:
 
